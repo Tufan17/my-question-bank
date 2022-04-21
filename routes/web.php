@@ -27,6 +27,8 @@ Route::get("/postlar",[PostController::class,"index"]);
 
 Route::post("/postlar",[PostController::class,"store"]);
 
+Route::get("/edit_post",[PostController::class,"update"]);
+
 Route::post("/edit_post",[PostController::class,"update"]);
 
 Route::get("/edit_post/{id}",[PostController::class,"edit"]);
