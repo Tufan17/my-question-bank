@@ -7,17 +7,23 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+               <form action="/question" method="post">
+                   <h4>Soru ekle</h4>
+                   <textarea name="question" style="width: 600px;margin-bottom: 50px"> </textarea>
+                   <h4>şıkları ekle</h4>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                   <textarea name="choice1" style="width: 600px;margin-bottom: 10px"> </textarea>
+                   <textarea name="choice2" style="width: 600px;margin-bottom: 10px"> </textarea>
+                   <textarea name="choice3" style="width: 600px;margin-bottom: 10px"> </textarea>
+                   <textarea name="choice4" style="width: 600px;margin-bottom: 10px"> </textarea>
 
-                    {{ __('You are logged in!') }}
-                </div>
+                   <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+
+               </form>
+
+
+                <button type="submit" class="btn  btn-block mb-4"><a href="/question_show">Soru sayfasına Git</a></button>
+
             </div>
         </div>
     </div>
