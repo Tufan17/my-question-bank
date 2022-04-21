@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -26,6 +27,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get("/postlar",[PostController::class,"index"]);
 
 Route::post("/postlar",[PostController::class,"store"]);
+
+Route::post("/question",[QuestionController::class,"store"]);
+
+Route::get("/question_show",[QuestionController::class,"index"]);
 
 Route::get("/edit_post",[PostController::class,"update"]);
 
