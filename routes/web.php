@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\QuestionAddController;
+use App\Http\Controllers\QuestionApi;
 use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +38,18 @@ Route::get("/edit_post",[PostController::class,"update"]);
 
 Route::post("/edit_post",[PostController::class,"update"]);
 
+Route::post("/question_new_add",[QuestionAddController::class,"store"]);
+
 Route::get("/edit_post/{id}",[PostController::class,"edit"]);
 
 Route::get("/delete_post/{id}",[PostController::class,"destroy"]);
+
+Route::get("/question_add",function (){
+    return view('question_add');
+});
+
+Route::get("/question_api",[QuestionApi::class,'index']);
+
+Route::get("/delete_question/{id}",[QuestionAddController::class,"destroy"]);
+
+
