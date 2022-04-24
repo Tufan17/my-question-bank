@@ -56,8 +56,8 @@
                             @endif
                         @else
 
-                            <li class="nav-item dropdown d-flex justify-content-between w-100">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item  d-flex justify-content-between w-100">
+                                <a id="navbarDropdown" class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="d-flex justify-content-end">
